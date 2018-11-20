@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mediatek.factorymode"
+    android:sharedUserId="android.uid.phone"
+    android:versionCode="181112001"
+    android:versionName="1.2.2">
+
+    <uses-permission android:name="com.google.android.gm.permission.WRITE_GMAIL" />
+    <uses-permission android:name="com.google.android.gm.permission.READ_GMAIL" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.HARDWARE_TEST" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.MASTER_CLEAR" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES"/>
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"/>
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY"/>
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>    
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOVE_PACKAGE" />
+    <uses-permission android:name="android.permission.MANAGE_USB" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.hardware.camera" />
+    <application android:label="@string/app_name"
+        android:theme="@*android:style/Theme.Material">
+        <activity
+            android:name=".FactoryMode"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+
+            </intent-filter>
+        </activity>
+
+        <service android:name=".CurrentConsumptionService"></service>
+        
+        <service android:name=".CPUTemperatureService"></service>
+        
+        
+        <receiver android:name=".EntranceReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE"/>
+                <data android:scheme="android_secret_code" android:host="83789"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.mediatek.factorymode.wifi.wifiStateListener" />
+
+        <!-- AutoTest -->
+        <activity
+            android:name=".AutoTest"
+            android:label="@string/AutoTest"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- AllTest -->
+        <activity
+            android:name=".AllTest"
+            android:label="@string/AllTest"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- HeadSet -->
+        <activity
+            android:name=".headset.HeadSet"
+            android:label="@string/HeadSet"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- GPS -->
+        <activity
+            android:name=".gps.GPS"
+            android:label="@string/GPS"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".gps.GPS1"
+            android:label="@string/GPS1"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".gps.GPS2"
+            android:label="@string/GPS2"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".gps.YGPS"
+            android:label="@string/GPS"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Vibrator -->
+        <activity
+            android:name=".vibrator.Vibrator"
+            android:label="@string/Vibrator"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Earphone -->
+        <activity
+            android:name="com.mediatek.factorymode.earphone.Earphone"
+            android:label="@string/Earphone"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Earphone And Vibrator -->
+        <activity
+            android:name=".earphonevibrator.EarphoneVibrator"
+            android:label="@string/EarphoneVibrator"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Rgb_led -->
+        <activity
+            android:name=".rgb_led.Rgb_led"
+            android:label="@string/Rgb_led"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+          <!-- cenon_kpd_led -->
+          <activity
+            android:name=".kpd_led.kpd_led"
+            android:label="@string/kpd_light_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+        <!-- Signal -->
+        <activity
+            android:name=".signal.Signal"
+            android:label="@string/Signal"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".BatteryLog"
+            android:label="@string/BatteryLog"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".AdcCheck"
+            android:label="@string/AdcCheck"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".DeviceInfo"
+            android:label="@string/device_info"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+		<!-- haiming add touch screen start -->
+        <activity
+            android:name=".touchscreen.TouchScreen"
+            android:label="@string/TouchScreen"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".touchscreen.TsHandWriting"
+            android:label="@string/TouchScreen_HandWriting"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".touchscreen.TsRateReport"
+            android:label="@string/TouchScreen_HandWriting"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".touchscreen.TsVerifyList"
+            android:label="@string/TouchScreen_Verification"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".touchscreen.TsVerifyLine"
+            android:label="@string/TouchScreen_VerificationLine"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".touchscreen.TsVerifyShakingPoint"
+            android:label="@string/TouchScreen_VerificationShaking"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".touchscreen.TsMultiTouch"
+            android:label="@string/TouchScreen_MultiTouch"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".touchscreen.TouchScreenSettings"
+            android:label="@string/TouchScreen_Settings"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- haiming add touch screen end -->
+
+        <activity
+            android:name=".touchscreen.PointTest"
+            android:label="@string/PointTest"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".touchscreen.LineTest"
+            android:label="@string/LineTest"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".backlight.BackLight"
+            android:label="@string/BackLight"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".memory.Memory"
+            android:label="@string/Memory"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Microphone -->
+        <activity
+            android:name=".microphone.MicRecorder"
+            android:label="@string/Microphone"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Audio -->
+        <activity
+            android:name=".audio.AudioTest"
+            android:label="@string/Audio"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Camera -->
+        <activity
+            android:name=".camera.CameraTest"
+            android:label="@string/Camera"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:clearTaskOnLaunch="true"
+            android:taskAffinity="android.task.camera" />
+        <activity
+            android:name=".camera.SubCamera"
+            android:label="@string/Camera"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:taskAffinity="android.task.camera" />
+
+        <!-- Wifi -->
+        <activity
+            android:name=".wifi.WiFiTest"
+            android:label="@string/WiFi"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Bluetooth -->
+        <activity
+            android:name="com.mediatek.factorymode.bluetooth.Bluetooth"
+            android:label="@string/Bluetooth"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Gsensor -->
+        <activity
+            android:name="com.mediatek.factorymode.sensor.GSensor"
+            android:label="@string/GSensor"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Gsensor With Calibrate -->
+        <activity
+            android:name="com.mediatek.factorymode.sensor.GSensorWithCalibrate"
+            android:label="@string/GSensorWithCalibrate"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Msensor -->
+        <activity
+            android:name="com.mediatek.factorymode.sensor.MSensor"
+            android:label="@string/MSensor"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Lsensor -->
+        <activity
+            android:name="com.mediatek.factorymode.sensor.LSensor"
+            android:label="@string/LSensor"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Psensor -->
+        <activity
+            android:name="com.mediatek.factorymode.sensor.PSensor"
+            android:label="@string/psensor_app_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- PulseSensor -->
+        <activity
+            android:name="com.mediatek.factorymode.sensor.PulseSensor"
+            android:label="@string/pulse_sensor_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+            
+        <!-- GyroscopeSensor -->
+        <activity
+            android:name="com.mediatek.factorymode.sensor.GyroscopeSensor"
+            android:label="@string/gyroscope_sensro_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- StepSensor -->
+        <activity
+            android:name="com.mediatek.factorymode.sensor.StepSensor"
+            android:label="@string/step_sensor_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- PressureSensor -->
+        <activity
+            android:name="com.mediatek.factorymode.sensor.PressureSensor"
+            android:label="@string/air_pressure_sensor_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Earphone -->
+        <activity
+            android:name="com.mediatek.factorymode.sdcard.SDCard"
+            android:label="@string/sdcard"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- SDCard And SIMCard -->
+        <activity
+            android:name="com.mediatek.factorymode.simsdcard.SimCardPre"
+            android:label="@string/SimCard"
+            android:theme="@style/AppTheme"
+            android:process="com.android.phone"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".simsdcard.SimSDCard"
+            android:label="@string/simcard_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- FMRadio -->
+        <activity
+            android:name="com.mediatek.factorymode.fmradio.FMRadio"
+            android:label="@string/FMRadio"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- KeyCode -->
+        <activity
+            android:name="com.mediatek.factorymode.KeyCode"
+            android:label="@string/KeyCode"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- LCD -->
+        <activity
+            android:name="com.mediatek.factorymode.lcd.LCD"
+            android:label="@string/LCD"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+        
+        <activity
+            android:name="com.mediatek.factorymode.lcd.LCDWhite"
+            android:label="@string/LCD"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+        <!-- SIMCard -->
+        <activity
+            android:name="com.mediatek.factorymode.simcard.SimCard"
+            android:label="@string/SimCard"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+        
+        <!-- OTG States -->
+        <activity
+            android:name="com.mediatek.factorymode.otg.OtgState"
+            android:label="@string/OTG"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+        <!-- back touch -->
+        <activity
+            android:name="com.mediatek.factorymode.backtouch.BackTouch"
+            android:label="@string/backtouch_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.mediatek.factorymode.MobileData"
+            android:label="@string/mobiledata_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+            
+        <activity
+            android:name="com.mediatek.factorymode.WearDetection"
+            android:label="@string/weardetection_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <!-- Report -->
+        <activity
+            android:name="com.mediatek.factorymode.Report"
+            android:label="@string/Report"
+            android:screenOrientation="portrait" />
+
+        <!-- Hall -->
+        <activity
+            android:name=".hall.Hall"
+            android:label="@string/hall_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+        <!-- nfc-->
+        <activity
+            android:name="com.mediatek.factorymode.sensor.Nfc"
+            android:label="@string/nfc"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mediatek.factorymode.flashlamp.FlashLamp"
+            android:label="@string/flash_lamp"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.mediatek.factorymode.FactoryDataReset"
+            android:label="@string/factory_data_reset"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".FactoryModeReceiver">
+            <intent-filter>
+                 <action android:name="android.provider.Telephony.SECRET_CODE" />
+                 <data android:scheme="android_secret_code" android:host="66" />
+            </intent-filter>
+
+            <intent-filter>
+                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            
+        </receiver>
+        
+        
+        <activity
+            android:name=".audio.AudioForBatteryTest"
+            android:label="@string/battery_used_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
+    </application>
+
+    <uses-sdk android:minSdkVersion="10" />
+
+
+</manifest>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/main_activity_padding_top_bottom"
+    android:layout_marginLeft="@dimen/main_activity_padding_left_right"
+    android:layout_marginRight="@dimen/main_activity_padding_left_right"
+    android:layout_marginBottom="@dimen/main_activity_padding_top_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/main_bt_autotest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/AutoTest"
+            android:textSize="36dip" />
+        <Button
+            android:id="@+id/main_bt_alltest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/AllTest"
+            android:textSize="36dip" />
+    </LinearLayout>
+    <GridView
+        android:id="@+id/main_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dip"
+        android:verticalSpacing="0.5dip"
+        android:horizontalSpacing="0.5dip"
+        android:numColumns="1"
+        android:columnWidth="90dip"
+        android:stretchMode="columnWidth"
+        android:gravity="center" />
+</LinearLayout>

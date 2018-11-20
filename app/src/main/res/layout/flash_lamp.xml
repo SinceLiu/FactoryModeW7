@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/info_layout">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dip"
+        android:text="@string/isFlash"
+        android:visibility="gone"/>
+     <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:text="@string/openflashlight"
+            android:id="@+id/open_light"
+            android:layout_width="wrap_content"
+            android:layout_height="100dip"
+            android:layout_weight="0.5" />
+        <Button
+            android:text="@string/closeflashlight"
+            android:id="@+id/close_light"
+            android:layout_width="wrap_content"
+            android:layout_height="100dip"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/flash_lamp_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:textSize="25dip"
+        android:text="@string/Success" />
+    <Button
+        android:id="@+id/flash_lamp_failed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:textSize="25dip"
+        android:text="@string/Failed" />
+</LinearLayout>

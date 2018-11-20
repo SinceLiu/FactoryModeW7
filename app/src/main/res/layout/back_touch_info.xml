@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/info_layout">
+
+    <LinearLayout style="@style/entry_layout" >
+        <TextView
+            style="@style/info_label"
+            android:text="@string/back_touch_status_label"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/info_value"
+            android:textSize="16sp" />
+       
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dip"
+        android:orientation="vertical" >
+         <TextView
+            android:id="@+id/rawdatastatus"
+            style="@style/info_value"
+            android:textSize="16sp" />
+             <TextView
+            android:id="@+id/deltastatus"
+            style="@style/info_value"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/otg_state_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="@string/Success"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/otg_state_failed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="@string/Failed"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,414 @@
+[
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_fmradio.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\fmradio.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_vldown.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\vldown.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_lsensor.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\lsensor.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_vlup.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\vlup.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_alltest.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\alltest.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_btn_default_selected.9.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\btn_default_selected.9.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_error.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\error.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_sdcard.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\sdcard.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_back.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\back.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_gsensor_y.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\gsensor_y.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_btn_default_normal_disable.9.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\btn_default_normal_disable.9.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_vumeter.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\vumeter.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_back_touch_info.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\back_touch_info.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_btn_default_pressed.9.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\btn_default_pressed.9.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_touchscreen.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\touchscreen.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_gsensor_z.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\gsensor_z.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_default.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable\\btn_default.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_vibrator.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\vibrator.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_gsensor_z_2.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\gsensor_z_2.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_gsensor_y_2.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\gsensor_y_2.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_gsensor_x_2.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\gsensor_x_2.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_home.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\home.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_btn_default_normal.9.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\btn_default_normal.9.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_adc_check_info.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\adc_check_info.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_headset.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\headset.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_simsdcard.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\simsdcard.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_gsensor_z.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\gsensor_z.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_btn_default_pressed.9.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\btn_default_pressed.9.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_camera.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\camera.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_main.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_hall_info.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\hall_info.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_device_info.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\device_info.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_btlist.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\btlist.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_lcd.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\lcd.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_otg_state_info.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\otg_state_info.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_vumeter.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\vumeter.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_gsensor_x.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\gsensor_x.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_touchscreen_handwriting.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\touchscreen_handwriting.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_backlight.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\backlight.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_compass.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\compass.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_keycode_grid.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\keycode_grid.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_gps2.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\gps2.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_search.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\search.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_psensor_background.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\psensor_background.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_memory.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\memory.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_wear_detection.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\wear_detection.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_rgb_led.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\rgb_led.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_wifi_test.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\wifi_test.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_unknown.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\unknown.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_flash_lamp.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\flash_lamp.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_keycode.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\keycode.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_psensor_background.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\psensor_background.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_sensor_mould.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\sensor_mould.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_vldown.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\vldown.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_unknown.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\unknown.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_vlup.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\vlup.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_btn_default_normal_disable_focused.9.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\btn_default_normal_disable_focused.9.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cross.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable\\cross.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_gsensor_y_2.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\gsensor_y_2.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_gsensor_z_2.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\gsensor_z_2.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_gsensor_x_2.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\gsensor_x_2.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_home.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\home.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_gps.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\gps.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_simcard.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\simcard.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_psensor.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\psensor.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_audio_test.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\audio_test.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_gsensor_with_calibrate.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\gsensor_with_calibrate.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_earphone_vibrate.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\earphone_vibrate.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_ble_test.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\ble_test.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_btn_default_normal.9.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\btn_default_normal.9.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\raw_earphone.mp3.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\raw\\earphone.mp3"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout-zh_main_grid.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout-zh\\main_grid.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_back.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\back.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_gsensor_y.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\gsensor_y.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_ygps.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\ygps.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_microphone.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\microphone.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_menu.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\menu.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_touchscreen_verification.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\touchscreen_verification.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_touch_settings.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\touch_settings.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_signal.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\signal.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_camera.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\camera.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_main_grid.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\main_grid.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_nfc_info.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\nfc_info.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_title.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\title.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\raw_tada.mp3.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\raw\\tada.mp3"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_btn_default_selected.9.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\btn_default_selected.9.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_gps1.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\gps1.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_audio_and_battery_test.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\audio_and_battery_test.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_error.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\error.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_compass.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\compass.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_menu.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\menu.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_gsensor.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\gsensor.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_factory_data_reset.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\factory_data_reset.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_camera.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\camera.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_msensor.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\msensor.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_micrecorder.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\micrecorder.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_search.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\search.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_btn_default_normal_disable.9.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\btn_default_normal_disable.9.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_battery_info.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\battery_info.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_btn_default_normal_disable_focused.9.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-mdpi\\btn_default_normal_disable_focused.9.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_mobiledata.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\mobiledata.xml"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_gsensor_x.png.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\drawable-hdpi\\gsensor_x.png"
+    },
+    {
+        "merged": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\res\\merged\\debug\\layout_report.xml.flat",
+        "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\layout\\report.xml"
+    }
+]

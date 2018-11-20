@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/info_layout"
+    android:gravity="center"
+    android:orientation="vertical">
+    
+    <TextView 
+        android:id="@+id/tv_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:textSize="@dimen/btn_succ_fail_text_size"
+        />
+    <TextView 
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:textSize="@dimen/btn_succ_fail_text_size"
+        />
+    <TextView 
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:textSize="@dimen/btn_succ_fail_text_size"
+        />
+    <TextView 
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	    android:textSize="@dimen/btn_succ_fail_text_size"
+        />
+    
+    <LinearLayout 
+	    style="@style/info_layout"
+	    android:gravity="center"
+	    android:orientation="horizontal">
+	    <Button
+	        android:id="@+id/audio_bt_ok"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="0.5"
+	        android:textSize="@dimen/btn_succ_fail_text_size"
+	        android:text="@string/Success"/>
+	    <Button
+	        android:id="@+id/audio_bt_failed"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="0.5"
+	        android:textSize="@dimen/btn_succ_fail_text_size"
+	        android:text="@string/Failed"/>
+	</LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="camera_margin_both_side">-60dip</dimen>
+</resources>

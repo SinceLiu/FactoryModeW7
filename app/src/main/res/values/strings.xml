@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="hello">Welcome to the factory mode</string>
+    <string name="app_name">Factory mode</string>
+    <string name="Settings">Settings</string>
+    <string name="AutoTest">AutoTest</string>
+    <string name="AllTest">AllTest</string>
+    <string name="Packageerror">Wrong, cannot find the packages!</string>
+    <string name="PackageIerror">Internal error</string>
+    <!--  BatteryLog part -->
+    <string name="BatteryLog">Power</string>
+    <string name="AdcCheck">Adc Check</string>
+    <string name="battery_info_status_label">Charging status:</string>
+    <string name="battery_info_scale_label">Battery:</string>
+    <string name="battery_info_level_label">Current electricity:</string>
+    <string name="battery_info_health_label">Power supply condition:</string>
+    <string name="battery_info_technology_label">Power technology:</string>
+    <string name="battery_info_voltage_label">Current voltage:</string>
+    <string name="battery_info_voltage_units">mV</string>
+    <string name="battery_info_temperature_label">Power supply temperature:</string>
+    <string name="battery_info_charging_label">Power supply current:</string>
+    <string name="battery_info_temperature_units">\u00B0 C</string>
+    <string name="battery_info_uptime">Battery up time:</string>
+    <string name="battery_info_adc">ADC Check:</string>
+    <string name="battery_info_awake_battery">Battery wake up time: </string>
+    <string name="battery_info_awake_plugged">Charging time:</string>
+    <string name="battery_info_screen_on">Screen on time:</string>
+    <string name="battery_info_status_unknown">Unknown</string>
+    <string name="battery_info_status_charging">Charging</string>
+    <string name="battery_info_status_charging_ac">(AC)</string>
+    <string name="battery_info_status_charging_usb">(USB)</string>
+    <string name="battery_info_status_discharging">Discharging</string>
+    <string name="battery_info_status_not_charging">Not charging</string>
+    <string name="battery_info_status_full">Full</string>
+    <string name="battery_info_health_unknown">Unknown</string>
+    <string name="battery_info_health_good">Good</string>
+    <string name="battery_info_health_overheat">Overheat</string>
+    <string name="battery_info_health_dead">Dead</string>
+    <string name="battery_info_health_over_voltage">Over voltage</string>
+    <string name="battery_info_health_unspecified_failure">Unknown error</string>
+    <string name="adc_check_status_label">ADC status:</string>
+    <!--  TouchScreen part -->
+    <string name="TouchScreen">Touch screen</string>
+    <string name="PointTest">Point test</string>
+    <string name="LineTest">Line test</string>
+    <string name="Result">View the results</string>
+    <string name="Offset">Offset:</string>
+    <string name="TouchComplete">Test completed</string>
+    <string name="Error">Failure</string>
+    <string name="DrawError">Draw Error!</string>
+    <string name="Again">Try again</string>
+    <string name="GoOn">Go on</string>
+    <!--  TouchScreen part -->
+   
+    <string name="TouchScreen_HandWriting">Touch screen handwriting</string>
+    <string name="TouchScreen_Verification">Touch screen verify</string>
+    <string name="TouchScreen_VerificationPoint">Touch screen calibration point</string>
+    <string name="TouchScreen_VerificationLine">Touch screen calibration line</string>
+    <string name="TouchScreen_VerificationShaking">Touch screen calibration shock</string>
+    <string name="TouchScreen_MultiTouch">Touch screen multi-touch</string>
+    <string name="TouchScreen_Settings_TextValue">Value</string>
+    <string name="TouchScreen_Settings_TextSpinner">Categories</string>
+    <string name="TouchScreen_Settings_TextSet">Settings</string>
+    <string name="TouchScreen_Settings">Settings</string>
+    <string name="TouchScreen_Settings_Value">0</string>
+    <string name="TouchScreen_Settings_sdcard">Close</string>
+    <string name="TouchScreen_Settings_uart">Close</string>
+    <string name="TouchScreen_Settings_TextUart">Open the Uart logs</string>
+    <string name="TouchScreen_Settings_TextSDcard">Open the SD card log</string>
+    <string name="TouchScreen_RateReport">Report</string>
+    
+    <!--  the Display part -->
+    <string name="BackLight">BackLight</string>
+    <string name="Display_lcd_Text">Background light</string>
+    <!--  the Memory NAND part -->
+    <string name="Memory">Memory</string>
+    <!--  Audio part -->
+    <string name="Audio">Sound</string>
+    <!--  Camera part -->
+    <string name="Camera">Camera</string>
+    <string name="Camera_takepic">Capture</string>
+    <string name="Camera_notfound">Front-camera not detected</string>
+    <!--  the WiFi part -->
+    <string name="WiFi">WiFi</string>
+    <string name="WiFi_success">Test success</string>
+    <string name="WiFi_failed">Test failure</string>
+    <string name="WiFi_scaning">Scaning...</string>
+    <string name="WiFi_info_closeing">wifi is closing...</string>
+    <string name="WiFi_info_close">wifi has been closed</string>
+    <string name="WiFi_info_opening">wifi are opening</string>
+    <string name="WiFi_info_open">wifi already open</string>
+    <string name="WiFi_info_unknown">Unknown</string>
+    <string name="WiFi_connecting">wifi are connecting...</string>
+    <string name="WiFi_notfound_openap">Not found open wifi access</string>
+    <!--  Headphones -->
+    <string name="HeadSet">Headphone</string>
+    <string name="HeadSet_plugged">Headphone insert</string>
+    <string name="HeadSet_unplugged">Headphone out</string>
+    <string name="HeadSet_tips">Please insert the headphones test</string>
+    <string name="HeadSet_hook">Hook button press on the headphone!</string>
+    <string name="HeadSet_hook_message">Please make sure the call duration can press the headphone Hook hang up?</string>
+    <!-- GPS -->
+    <string name="GPS">GPS</string>
+    <string name="GPS1">GPS1</string>
+    <string name="GPS2">GPS2</string>
+    <string name="GPS_open">Please open GPS</string>
+    <string name="GPS_connect">GPS has opened, connecting...</string>
+    <string name="GPS_normal">GPS ok</string>
+    <string name="GPS_satelliteNum">search satellite GPS number:</string>
+    <string name="GPS_Signal">GPS signals:</string>
+    <string name="GPS_Success">Success</string>
+    <string name="GPS_Fail">Fail</string>
+    <string name="GPS_time">Time-consuming: %s minutes</string>
+    <!-- GSensor -->
+    <string name="Sensor">Sensor</string>
+    <!-- Vibrator -->
+    <string name="Vibrator">Vibrator</string>
+    <!-- Rgb_led -->
+    <string name="Rgb_led">RGB Led</string>
+ <!-- kpd_led -->
+    <string name="kpd_light_name">kpd led</string>
+    <!-- Signal -->
+    <string name="Signal">Call</string>
+    <!-- YGPS part -->
+    <string name="YGPS">YGPS</string>
+    <!-- AGPS part -->
+    <string name="AGPS">AGPS</string>
+    <!-- the Microphone -->
+    <string name="Microphone">Microphone</string>
+    <string name="Mic_start">Start recording</string>
+    <string name="Mic_stop">Stop the recording and playback</string>
+    <string name="Mic_play">Start playing</string>
+    <string name="Mic_operation">Mic option</string>
+    <string name="Speaker_operation">Speaker option</string>
+    <!-- BlutTooth part -->
+    <string name="Bluetooth">Bluetooth</string>
+    <string name="Bluetooth_open">Bluetooth already open</string>
+    <string name="Bluetooth_opening">Bluetooth is opening...</string>
+    <string name="Bluetooth_scaning">Searching...</string>
+    <string name="Bluetooth_mac">MAC address:</string>
+    <string name="Bluetooth_scan_success">Scan success</string>
+    <!-- GSensor part -->
+    <string name="GSensor">Gsensor Test2</string>
+    <string name="GSensorWithCalibrate">Gsensor Test1</string>
+    <string name="GSensor_info">Erect, flat, side stand, observe the gravity change!</string>
+    <string name="GSensor_with_calibrate_info">Flat and observe the gravity change!</string>
+    <string name="GSensor_with_calibrate">Calibrate</string>
+    <string name="GSensor_with_calibrate_do_calibrate">Calibrating</string>
+    <string name="GSensor_with_calibrate_result">Testing</string>
+    <string name="GSensor_with_calibrate_retest">ReTest</string>
+    <!-- MSensor part -->
+    <string name="MSensor">MSensor</string>
+    <string name="MSensor_default_text">Unknown data</string>
+    <string name="MSensor_North">North</string>
+    <string name="MSensor_East">East</string>
+    <string name="MSensor_South">South</string>
+    <string name="MSensor_West">West</string>
+    <string name="MSensor_north_east">North by east</string>
+    <string name="MSensor_south_east">South by east</string>
+    <string name="MSensor_south_west">South by west</string>
+    <string name="MSensor_north_west">North by west</string>
+    <!-- LSensor part -->
+    <string name="LSensor">LSensor</string>
+    <string name="LSensor_default_text">Unknown data</string>
+    <string name="LSensor_accuracy">Accuracy:</string>
+    <string name="LSensor_value">Calue:</string>
+    <string name="LSensor_tips">Where light and dark the observation values change!</string>
+    <string name="LCD_increase">Strong backlight</string>
+    <string name="LCD_weaken">Weak backlight</string>
+    <string name="Success">Success</string>
+    <string name="Failed">Failure</string>
+    <!-- psensor part -->
+    <string name="psensor_hello">PSensor validation</string>
+    <string name="psensor_app_name">Distance sensor</string>
+    <string name="proximity">Close to:</string>
+    <string name="tips">Please place the hand and left the induction zone to watch the change in value!</string>
+    <string name="calibrate">Calibration</string>
+    <!-- Earphone -->
+    <string name="Earphone">Receiver</string>
+    <!-- the Activity name part -->
+    <string name="battery_name">Power</string>
+    <string name="adc_check_name">ADC Check</string>
+    <string name="touchscreen_name">Touch</string>
+    <string name="speaker_name">Speaker</string>
+    <string name="battery_used_name">Battery Used</string>
+    <string name="wifi_name">WiFi</string>
+    <string name="bluetooth_name">Bluetooth</string>
+    <string name="headset_name">Headphone</string>
+    <string name="earphone_name">Receiver</string>
+    <string name="gps_name">GPS</string>
+    <string name="gps1_name">GPS1</string>
+    <string name="gps2_name">GPS2</string>
+    <string name="vibrator_name">Vibrate</string>
+    <string name="rgb_led_name">RGB Led</string>
+    <string name="hall_name">Hall</string>
+    <string name="hall_on">opened</string>
+    <string name="hall_off">closed</string>
+    <string name="telephone_name">Phone</string>
+    <string name="backlight_name">Backlight</string>
+    <string name="memory_name">Memory</string>
+    <string name="gsensor_name">Gsensor Test2</string>
+    <string name="gsensor_with_calibrate_name">Gsensor Test1</string>
+    <string name="msensor_name">Msensor</string>
+    <string name="lsensor_name">Lsensor</string>
+    <string name="psensor_name">Psensor</string>
+    <string name="camera_name">Camera</string>
+    <string name="sdcard_name">T card</string>
+    <string name="fmradio_name">FM radio</string>
+    <string name="KeyCode_name">Keycode</string>
+    <string name="lcd_name">LCD</string>
+    <string name="lcd_white_name">Only White</string>
+    <string name="factory_reset">Reset Factory</string>
+    <string name="sim_name">SIM card</string>
+    <string name="microphone_name">Mic</string>
+    <string name="subcamera_name">SubCam</string>
+    <string name="headsethook_name">Headphone hook</string>
+    
+    <string name="pulse_sensor_name">Pules Sensor</string>
+    <string name="step_sensor_name">Step Sensor</string>
+    <string name="gyroscope_sensro_name">Gyroscope Sensor</string>
+    <string name="uv_sensor_name">UV Sensor</string>
+    <string name="air_pressure_sensor_name">Air Pressure Sensor</string>
+
+    <!-- Factory reset part -->
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Cancel</string>
+    <string name="alert_title">Factory reset</string>
+    <string name="alert_content">Are you sure to reset factory？</string>
+
+    <!-- SDcard part -->
+    <string name="sdcard">T card</string>
+    <string name="storage_sdcard">SD card</string>
+    <string name="storage_phone">Phone Storage</string>
+    <string name="sdcard_tips_success">Storage has been detected: </string>
+    <string name="sdcard_tips_failed">SD card not detected</string>
+    <string name="sdcard_totalsize">total capacity:</string>
+    <string name="sdcard_freesize">residual capacity:</string>
+    <!-- FMRadio part -->
+    <string name="FMRadio">FM radio</string>
+    <string name="FMRadio_notice">Choose</string>
+    <!-- KeyCode -->
+    <string name="KeyCode">KeyCode</string>
+    <string name="KeyCode_info">Please press button</string>
+    <!-- the LCD part -->
+    <string name="LCD">LCD</string>
+    <!-- SimCard part -->
+    <string name="SimCard">SIM card</string>
+    <string name="sim1_info_ok">SIM1: success</string>
+    <string name="sim1_info_failed">SIM1: not found</string>
+    <string name="sim2_info_ok">SIM2: success</string>
+    <string name="sim2_info_failed">SIM2: not found</string>
+    <string name="sim_info_ok">SIM: success</string>
+    <string name="sim_info_failed">SIM: not found</string>
+    <string name="emergency_call">Emergency Call</string>
+    <string name="service_call">Service Call</string>
+    <!-- Otg -->
+    <string name="otg_name">OTG</string>
+    <string name="OTG">OTG</string>
+    <string name="otg_status_label">OTG status:</string>
+    <string name="otg_status_ok">OTG success</string>
+    <string name="otg_status_failed">OTG not found</string>
+
+
+    <!-- BACKTOUCH -->
+    <string name="backtouch_name">Backtouch</string>
+    <string name="BACKTOUCH">Backtouch</string>
+    <string name="back_touch_status_label">Backtouch status:</string>
+    <string name="back_touch_status_ok">Backtouch success</string>
+    <string name="back_touch_status_failed">Backtouch not found</string>
+        
+    <!-- the Report part -->
+    <string name="Report">Test Report</string>
+    <string name="report_ok">Test success item:</string>
+    <string name="report_failed">Test failure items:</string>
+    <string name="report_notest">Untested items:</string>
+    <!-- Menu part -->
+    <string name="menu_exit">Exit Test</string>
+    
+    <!-- the Proximity Sensor Calibration -->
+    <string name="proximity_title">"Proximity sensor calibration"</string>
+    <string name="proximity_dlg_message">"Laid his hand on the right distance for calibration, the calibration can dial after successful validation!"</string>
+    <string name="proximity_dlg_title">"Calibration tip"</string>
+    <string name="proximity_success">Calibration success.</string>
+    <string name="proximity_fail">Calibration failure.</string>
+    <string name="proximity_dlg_yes">"Yes"</string>
+    <string name="proximity_dlg_no">"No"</string>
+    <string name="flip_setting_screen_off_title">Flip out screen</string>
+    <string name="flip_setting_ring_mute_title">Flip calls mute</string>
+    <string name="accessibility_volumeup_button_category">"Key upper"</string>
+    <string name="accessibility_volumeup_button_accept_call">"In accordance with the" key "upper answer the call"</string>
+    <string name="earphone_vibrator_name">Phone vibrate</string>
+    <string name="Audio_operation">Phone options</string>
+    <string name="Vibrator_operation">Vibrate options</string>
+    <string name="EarphoneVibrator">Receiver/vibration</string>
+    <string name="sim_sdcard_name">SIM card/T</string>
+    <string name="simcard_name">SIM card</string>
+    <string name="SIM_operation">SIM card option</string>
+    <string name="SDCard_operation">SD card option</string>
+    <string name="flash_lamp">Flashlight</string>
+    <string name="isFlash">Get lamp when first into the flash?</string>
+    <string name="hall_info_status_label">Clock interface is that when the magnet close to the hall, hall function normal OK!</string>
+    <string name="nfc_info_status_label">Clock interface is that when the magnet close to the nfc, nfc function normal OK!</string>
+    <string name="factory_data_reset">ResetPhone</string>
+    <string name="reset_dialog">Make sure reset your cell?</string>
+    <string name="reset_dialog_label">This operation will erase all data in your mobile phone memory devices.</string>
+    <string name="reset_erase_sdcard">Mobile storage of all data, such as music and pictures</string>
+    <string name="reset_erase_sdcard_label">Formatting phone store</string>
+    <string name="reset_dialog_comfirm">Confirm</string>
+    <string name="reset_dialog_cancel">Cancel</string>
+    <string name="nfc">NFC</string>
+
+    <string name="device_info">Device info</string>
+    <string name="device_system_info"> Motherboard information:</string>
+    <string name="device_version_info">Software version:</string>
+    <string name="device_meid_info">MEID number：</string>
+    <string name="device_imei_info">IMEI number：</string>
+    <!-- <string name="device_sn_info">SN number:</string> -->
+	<string name="device_sn_info">Serial number:</string>
+    <string name="device_wifi_info">Wifi mac:</string>
+    <string name="device_tp_version">TP version:</string>
+    <string name="device_rf_info">RF calibration:</string>
+    <string name="device_battery_info">Battery manufacturer:</string>
+    <string name="device_tp_name">TP name:</string>
+    <string name="device_tp_ver">TP version:</string>
+    <string name="device_sceen_name">Sceen name:</string>
+    <string name="device_sceen_type">Sceen type:</string>
+    <string name="device_to_engineer_mode">click to entry Engineer Mode</string>
+
+    <!-- mcube add start -->
+    <string name="gesture_settings">Gesture &amp; motion</string>
+    <string name="calibration_settings_title">Gsensor Calibration</string>
+    <string name="calibration_settings_summary">Calibrate the accelerometer sensor</string>
+    <!-- mcube add end   -->
+
+    <string name="line_test">lineTest</string>
+    <string name="openflashlight">open</string>
+    <string name="closeflashlight">close</string>
+    <string name="scan_test_apk">Scanner Test</string>
+
+    <string name="vibrate_tips">Do you feel the shock?</string>
+
+    <string name="motion_type">Motion Type:</string>
+    <string name="step_number">Step Number:</string>
+    <string name="mobiledata_name">moible data</string>
+    <string name="open">Open data connection</string>
+    <string name="close">Closing data connection</string>
+    <string name="mobiledata_remind">Please insert the SIM card</string>
+    <string name="mobiledata_is_open">Data connection already open</string>
+    <string name="mobiledata_is_close">Data connection has been closed</string>
+    <string name="mobiledata_is_opening">Data connection is open</string>
+    <string name="mobiledata_is_closing">Data connection is closed</string>
+    <string name="weardetection_name">Wear detection</string>
+    <string name="weardetection_open_failed">Open the device failed</string>
+    <string name="weardetection_failed">Not wearing</string>
+    <string name="weardetection_success">Have worn</string>
+
+    <string name="fixture_text">Fixture Test</string>
+    <string name="patch_test">Patch test</string>
+    
+    
+    <string name="current_consumption_monitored">Current consumption monitored</string>
+    <string name="cpu_temperature">CPU Temperature</string>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+  android:layout_width="fill_parent"
+  android:orientation="vertical"
+  android:layout_height="wrap_content">
+  		
+	<LinearLayout android:id="@+id/LinearLayout" 
+		      android:layout_width="fill_parent" 
+		      android:layout_height="wrap_content"
+		      android:orientation="horizontal">
+		
+		<TextView android:text="@string/TouchScreen_Settings_TextSpinner" 
+			android:layout_marginLeft="10dip"
+			android:layout_marginTop="10dip"
+			android:id="@+id/TouchScreen_Settings_TextSpinner" 
+			android:layout_width="60dip" 
+			android:layout_height="wrap_content"></TextView>
+	
+	
+		<Spinner android:layout_height="wrap_content" 
+			android:layout_width="210dip" 
+			android:layout_marginLeft="10dip" 
+			android:id="@+id/TouchScreen_Settings_Spinner" 
+			android:layout_marginTop="10dip"></Spinner>
+	</LinearLayout>
+  <LinearLayout android:id="@+id/LinearLayout" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginTop="10dip">
+	  
+		<TextView android:text="@string/TouchScreen_Settings_TextValue" 
+			android:layout_marginLeft="10dip"
+			android:layout_marginTop="10dip"
+			android:id="@+id/TouchScreen_Settings_TextValue" 
+			android:layout_width="60dip" 
+			android:layout_height="wrap_content"></TextView>
+			
+		<EditText android:text="@string/TouchScreen_Settings_Value" 
+			android:layout_marginLeft="10dip" 
+			android:layout_marginTop="10dip"
+			android:id="@+id/TouchScreen_Settings_Value" 
+			android:layout_width="210dip" 
+			android:layout_height="wrap_content"
+			android:numeric="integer"></EditText>
+  </LinearLayout>
+  <LinearLayout android:id="@+id/LinearLayout" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+	      android:layout_marginTop="10dip">
+	  
+	<Button android:text="@string/TouchScreen_Settings_TextSet" 
+		android:layout_marginLeft="80dip" 
+		android:layout_marginTop="10dip"
+		android:id="@+id/TouchScreen_Settings_TextSet" 
+		android:layout_width="215dip" 
+		android:layout_height="wrap_content"></Button>
+		
+</LinearLayout>
+
+</LinearLayout>
+</ScrollView>

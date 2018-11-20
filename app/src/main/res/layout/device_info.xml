@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/info_layout">
+    <!-- Machine information -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.7"
+        android:fadeScrollbars="false">
+        <LinearLayout
+            style="@style/info_layout">
+            <LinearLayout style="@style/entry_layout">
+                <TextView
+                    android:text="@string/device_system_info"
+                    style="@style/info_label" />
+                <TextView
+                    android:id="@+id/status"
+                    style="@style/info_value" />
+            </LinearLayout>
+            <!-- Software version -->
+            <LinearLayout style="@style/entry_layout">
+                <TextView
+                    android:text="@string/device_version_info"
+                    style="@style/info_label" />
+                <TextView
+                    android:id="@+id/level"
+                    style="@style/info_value" />
+            </LinearLayout>
+            <!-- MEID number -->
+            <LinearLayout
+                android:id="@+id/device_meid_layout"
+                style="@style/entry_layout">
+                <TextView
+                    android:text="@string/device_meid_info"
+                    style="@style/info_label" />
+                <TextView
+                    android:id="@+id/meid"
+                    style="@style/info_value" />
+            </LinearLayout>
+            <!-- IMEI number -->
+            <LinearLayout style="@style/entry_layout">
+                <TextView
+                    android:text="@string/device_imei_info"
+                    style="@style/info_label" />
+                <TextView
+                    android:id="@+id/imei"
+                    style="@style/info_value" />
+            </LinearLayout>
+            <!-- SN number -->
+            <LinearLayout style="@style/entry_layout">
+                <TextView
+                    android:text="@string/device_sn_info"
+                    style="@style/info_label" />
+                <TextView
+                    android:id="@+id/sn"
+                    style="@style/info_value" />
+            </LinearLayout>
+            <!-- Wifi Mac number -->
+                <LinearLayout style="@style/entry_layout">
+                    <TextView
+                        android:text="@string/device_wifi_info"
+                        style="@style/info_label" />
+                    <TextView
+                        android:id="@+id/wifi_mac"
+                    style="@style/info_value" />
+                </LinearLayout>
+            <!-- Tp version -->
+                <LinearLayout style="@style/entry_layout"
+                    android:id="@+id/tp_version_layout"
+                    android:visibility="gone" >
+                    <TextView
+                        android:text="@string/device_tp_version"
+                        style="@style/info_label" />
+                    <TextView
+                        android:id="@+id/tp_version"
+                    style="@style/info_value" />
+                </LinearLayout>
+            <!-- RF Info -->
+            <LinearLayout style="@style/entry_layout">
+                <TextView
+                    android:text="@string/device_rf_info"
+                    style="@style/info_label" />
+                <TextView
+                    android:id="@+id/rf_info"
+                    style="@style/info_value" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/to_engineer_mode"
+                android:text="@string/device_to_engineer_mode"
+                style="@style/info_label"
+                android:clickable="true"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/deviceinfo_bt_ok"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/btn_succ_fail_text_size"
+            android:text="@string/Success" />
+        <Button
+            android:id="@+id/deviceinfo_bt_failed"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/btn_succ_fail_text_size"
+            android:text="@string/Failed" />
+    </LinearLayout>
+</LinearLayout>

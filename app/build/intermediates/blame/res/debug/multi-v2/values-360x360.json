@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-360x360\\values-360x360.xml",
+            "map": [
+                {
+                    "source": "F:\\Android Studio WorkSpace\\FactoryModeW7\\app\\src\\main\\res\\values-360x360\\dimens.xml",
+                    "from": {
+                        "startLines": "13,10,11,4,17,18,3,2,7,6,5,15,14,12,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "676,511,566,185,847,910,120,55,345,293,240,786,729,623,397,453",
+                        "endColumns": "52,54,56,54,62,61,64,64,51,51,52,59,56,52,55,57",
+                        "endOffsets": "724,561,618,235,905,967,180,115,392,340,288,841,781,671,448,506"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,108,163,220,275,338,400,465,530,582,634,687,747,804,857,913",
+                        "endColumns": "52,54,56,54,62,61,64,64,51,51,52,59,56,52,55,57",
+                        "endOffsets": "103,158,215,270,333,395,460,525,577,629,682,742,799,852,908,966"
+                    }
+                }
+            ]
+        }
+    ]
+}
