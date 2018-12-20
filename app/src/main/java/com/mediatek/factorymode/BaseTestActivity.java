@@ -12,5 +12,5 @@ public class BaseTestActivity extends Activity {
 		if(AllTest.begin_auto_test){
 			getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		}
-	};
+	}
 }

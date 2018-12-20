@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mediatek.factorymode"
     android:sharedUserId="android.uid.phone"
-    android:versionCode="181112001"
-    android:versionName="1.2.2">
+    android:versionCode="181211001"
+    android:versionName="1.2.4">
 
     <uses-permission android:name="com.google.android.gm.permission.WRITE_GMAIL" />
     <uses-permission android:name="com.google.android.gm.permission.READ_GMAIL" />
@@ -279,7 +279,7 @@
             android:label="@string/Camera"
             android:theme="@style/AppTheme"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:clearTaskOnLaunch="true"
             android:taskAffinity="android.task.camera" />
         <activity
@@ -287,7 +287,7 @@
             android:label="@string/Camera"
             android:theme="@style/AppTheme"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:clearTaskOnLaunch="true"
             android:stateNotNeeded="true"
             android:taskAffinity="android.task.camera" />

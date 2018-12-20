@@ -206,6 +206,8 @@ public class GSensorWithCalibrate extends BaseTestActivity implements OnClickLis
 
     protected void onDestroy() {
         mSm.unregisterListener(lsn);
+        unregisterReceiver(mReceiver);
+        mHandler.removeCallbacksAndMessages(null);
         super.onDestroy();
     }
 

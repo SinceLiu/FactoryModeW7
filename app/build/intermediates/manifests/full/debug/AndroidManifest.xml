@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mediatek.factorymode"
     android:sharedUserId="android.uid.phone"
-    android:versionCode="181112001"
-    android:versionName="1.2.2" >
+    android:versionCode="181211001"
+    android:versionName="1.2.4" >
 
     <uses-sdk
         android:minSdkVersion="10"
@@ -287,7 +287,7 @@
             android:clearTaskOnLaunch="true"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/Camera"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:taskAffinity="android.task.camera"
             android:theme="@style/AppTheme" />
         <activity
@@ -295,7 +295,7 @@
             android:clearTaskOnLaunch="true"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/Camera"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:stateNotNeeded="true"
             android:taskAffinity="android.task.camera"
             android:theme="@style/AppTheme" />

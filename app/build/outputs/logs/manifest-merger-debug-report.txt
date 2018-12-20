@@ -576,7 +576,7 @@ ADDED from F:\Android Studio WorkSpace\FactoryModeW7\app\src\main\AndroidManifes
 activity#com.mediatek.factorymode.camera.CameraTest
 ADDED from F:\Android Studio WorkSpace\FactoryModeW7\app\src\main\AndroidManifest.xml:277:9-284:58
 	android:screenOrientation
-		ADDED from F:\Android Studio WorkSpace\FactoryModeW7\app\src\main\AndroidManifest.xml:282:13-50
+		ADDED from F:\Android Studio WorkSpace\FactoryModeW7\app\src\main\AndroidManifest.xml:282:13-49
 	android:clearTaskOnLaunch
 		ADDED from F:\Android Studio WorkSpace\FactoryModeW7\app\src\main\AndroidManifest.xml:283:13-45
 	android:label
@@ -592,7 +592,7 @@ ADDED from F:\Android Studio WorkSpace\FactoryModeW7\app\src\main\AndroidManifes
 activity#com.mediatek.factorymode.camera.SubCamera
 ADDED from F:\Android Studio WorkSpace\FactoryModeW7\app\src\main\AndroidManifest.xml:285:9-293:58
 	android:screenOrientation
-		ADDED from F:\Android Studio WorkSpace\FactoryModeW7\app\src\main\AndroidManifest.xml:290:13-50
+		ADDED from F:\Android Studio WorkSpace\FactoryModeW7\app\src\main\AndroidManifest.xml:290:13-49
 	android:clearTaskOnLaunch
 		ADDED from F:\Android Studio WorkSpace\FactoryModeW7\app\src\main\AndroidManifest.xml:291:13-45
 	android:stateNotNeeded
