@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mediatek.factorymode"
     android:sharedUserId="android.uid.phone"
-    android:versionCode="181211001"
-    android:versionName="1.2.4" >
+    android:versionCode="181226001"
+    android:versionName="1.2.5" >
 
     <uses-sdk
         android:minSdkVersion="10"
@@ -66,6 +66,7 @@
 
     <application
         android:debuggable="true"
+        android:hardwareAccelerated="true"
         android:label="@string/app_name"
         android:theme="@*android:style/Theme.Material" >
         <activity

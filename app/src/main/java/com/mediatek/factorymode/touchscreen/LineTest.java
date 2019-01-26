@@ -36,7 +36,7 @@ public class LineTest extends BaseTestActivity {
 
     public double mDiversity = 0;
 
-    public List<List<Point>> mPts1 = new ArrayList<List<Point>>();;
+    public List<List<Point>> mPts1 = new ArrayList<List<Point>>();
 
     private List<Point> mTemPoints = new ArrayList<Point>();
 
@@ -71,45 +71,54 @@ public class LineTest extends BaseTestActivity {
     private String mResultString = "";
 
     private SharedPreferences mSp;
-	
-	boolean mIsDrawRect = false;
-	
-	boolean mDrawRectSuccess = false;
-	
-	boolean mDrawDiagonalSuccess = false;
-	
-	boolean mDrawDiagonalSuccess1 = false;
-	
-	boolean mDrawDiagonalSuccess2 = false;
-	
-	boolean mDrawVerticalLineSuccess = false;
-	
-	boolean mDrawHorizontalLineSuccess = false;
-	
-	boolean mDrawCrossSuccess = false;
-	
-	private ArrayList<RectF> mDiagonalCorner = new ArrayList<RectF>();
-	
-	private ArrayList<RectF> mDiagonalCheck = new ArrayList<RectF>();
-	
-	public List<Point> mDiagonalDrawPoint1 = new ArrayList<Point>();
-	
-	public List<Point> mDiagonalDrawPoint2 = new ArrayList<Point>();
-	
-	public List<Point> mVerticalLinePoint = new ArrayList<Point>();
-	
-	public List<Point> mHorizontalLinePoint = new ArrayList<Point>();
-	
-	public List<RectF> mVerticalCheckPoint = new ArrayList<RectF>();
-	
-	public List<RectF> mHorizontalCheckPoint = new ArrayList<RectF>();
-	
-	private ArrayList<RectF> mCrossRect = new ArrayList<RectF>();
-	
-	private ArrayList<RectF> mCrossCheck = new ArrayList<RectF>();
-	
-	int mDiagonalCornerWidth = 35;
-	int mDiagonalCheckWidth = 40;
+
+    boolean mDrawRectVertexLeft = false;
+    boolean mDrawRectVertexTop = false;
+    boolean mDrawRectVertexRight = false;
+    boolean mDrawRectVertexBottom = false;
+    boolean mDrawRectMidpointLeft = false;
+    boolean mDrawRectMidpointTop = false;
+    boolean mDrawRectMidpointRight = false;
+    boolean mDrawRectMidpointBottom = false;
+
+    boolean mIsDrawRect = false;
+
+    boolean mDrawRectSuccess = false;
+
+    boolean mDrawDiagonalSuccess = false;
+
+    boolean mDrawDiagonalSuccess1 = false;
+
+    boolean mDrawDiagonalSuccess2 = false;
+
+    boolean mDrawVerticalLineSuccess = false;
+
+    boolean mDrawHorizontalLineSuccess = false;
+
+    boolean mDrawCrossSuccess = false;
+
+    private ArrayList<RectF> mDiagonalCorner = new ArrayList<RectF>();
+
+    private ArrayList<RectF> mDiagonalCheck = new ArrayList<RectF>();
+
+    public List<Point> mDiagonalDrawPoint1 = new ArrayList<Point>();
+
+    public List<Point> mDiagonalDrawPoint2 = new ArrayList<Point>();
+
+    public List<Point> mVerticalLinePoint = new ArrayList<Point>();
+
+    public List<Point> mHorizontalLinePoint = new ArrayList<Point>();
+
+    public List<RectF> mVerticalCheckPoint = new ArrayList<RectF>();
+
+    public List<RectF> mHorizontalCheckPoint = new ArrayList<RectF>();
+
+    private ArrayList<RectF> mCrossRect = new ArrayList<RectF>();
+
+    private ArrayList<RectF> mCrossCheck = new ArrayList<RectF>();
+
+    int mDiagonalCornerWidth = 35;
+    int mDiagonalCheckWidth = 40;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,13 +154,13 @@ public class LineTest extends BaseTestActivity {
 
     public void CalculateDiversity() {
         Point cp = new Point(0, 0);
-		flags = 0;
-        if (mInput.size() == 0){
-			mIsDrawRect = false;
-			mDrawRectSuccess = false;
-			mTemPoints.clear();
+        flags = 0;
+        if (mInput.size() == 0) {
+            mIsDrawRect = false;
+            mDrawRectSuccess = false;
+            mTemPoints.clear();
             return;
-		}
+        }
         distributeAllPoint(mInput);
         double error = 0.0;
         for (int j = 0; j < mInputLeft.size(); j++) {
@@ -176,7 +185,7 @@ public class LineTest extends BaseTestActivity {
 
         mDiversity = error
                 / (mInputLeft.size() + mInputTop.size() + mInputRight.size() + mInputBottom
-                        .size());
+                .size());
         mResultString = String.valueOf(mDiversity);
 
         int value = (int) Float.parseFloat(mResultString);
@@ -184,13 +193,50 @@ public class LineTest extends BaseTestActivity {
             flags = 1;
         }
 
-        if (mInputLeft.size() < 5 || mInputTop.size() < 5 || mInputRight.size() < 5
-                || mInputBottom.size() < 5) {
+        if (mInputLeft.size() < 5 || mInputTop.size() < 5 || mInputRight.size() < 5 || mInputBottom.size() < 5
+                || !mDrawRectVertexLeft || !mDrawRectVertexRight || !mDrawRectVertexTop || !mDrawRectVertexBottom
+                || !mDrawRectMidpointLeft || !mDrawRectMidpointRight || !mDrawRectMidpointTop || !mDrawRectMidpointBottom) {
             mIsDrawRect = false;
-			mDrawRectSuccess = false;
-			mTemPoints.clear();
+            mDrawRectSuccess = false;
+            mTemPoints.clear();
         }
+        Log.e("lxx", mDrawRectVertexLeft + "," + mDrawRectVertexBottom + "," + mDrawRectVertexRight + "," + mDrawRectVertexTop
+                + "," + mDrawRectMidpointLeft + "," + mDrawRectMidpointBottom + "," + mDrawRectMidpointRight + "," + mDrawRectMidpointTop);
         mDiversity = 0.0;
+        mDrawRectVertexLeft = mDrawRectVertexTop = mDrawRectVertexRight = mDrawRectVertexBottom
+                = mDrawRectMidpointLeft = mDrawRectMidpointTop = mDrawRectMidpointRight = mDrawRectMidpointBottom = false;
+    }
+
+    //是否经过四个顶点和四条边的中点
+    public void checkRect(Point point) {
+        if (point.x <= mPadding + 10 && point.y <= mPadding + 10) {
+            mDrawRectVertexLeft = true;
+        }
+        if (point.x <= mPadding + 10 && point.y >= mRectHeight - mPadding - 10) {
+            mDrawRectVertexBottom = true;
+        }
+        if (point.x >= mRectWidth - mPadding - 10 && point.y >= mRectHeight - mPadding - 10) {
+            mDrawRectVertexRight = true;
+        }
+        if (point.x >= mRectWidth - mPadding - 10 && point.y <= mPadding + 10) {
+            mDrawRectVertexTop = true;
+        }
+        if (point.x <= mPadding + 10 &&
+                point.y >= mRectHeight / 2 - mPadding - 10 && point.y <= mRectHeight / 2 + mPadding + 10) {
+            mDrawRectMidpointLeft = true;
+        }
+        if (point.x >= mRectWidth / 2 - mPadding - 10 && point.x <= mRectWidth / 2 + mPadding + 10 &&
+                point.y >= mRectHeight - mPadding - 10) {
+            mDrawRectMidpointBottom = true;
+        }
+        if (point.x >= mRectWidth - mPadding - 10 &&
+                point.y >= mRectHeight / 2 - mPadding - 10 && point.y <= mRectHeight / 2 + mPadding + 10) {
+            mDrawRectMidpointRight = true;
+        }
+        if (point.x >= mRectWidth / 2 - mPadding - 10 && point.x <= mRectWidth / 2 + mPadding + 10 &&
+                point.y >= mRectHeight - mPadding - 10) {
+            mDrawRectMidpointTop = true;
+        }
     }
 
     public void releaseList() {
@@ -205,7 +251,7 @@ public class LineTest extends BaseTestActivity {
     }
 
     private boolean isBeginOrEndPoint(int x, int y) {
-        Log.d("LineTest", "x="+x+"y="+y);
+        Log.d("LineTest", "x=" + x + "y=" + y);
 		/*if ((x < mPadding * 4 || x > mRectWidth - mPadding * 4)
                 && (y < mPadding * 4 || y > mRectHeight - mPadding * 4)) {
 			mIsDrawRect = true;
@@ -213,139 +259,139 @@ public class LineTest extends BaseTestActivity {
         }*/
         if ((x < mPadding * 4)
                 && (y < mPadding * 4)) {
-			mIsDrawRect = true;
+            mIsDrawRect = true;
             return true;
         }
         return false;
     }
-	
+
     private boolean isBeginOrEndDiagonal(int x, int y) {
-        for(int i=0; i< mDiagonalCorner.size(); i++){
-			if(mDiagonalCorner.get(i).contains(x, y)){
-				mDiagonalCorner.remove(i);
-				return true;
-			}
-		}
+        for (int i = 0; i < mDiagonalCorner.size(); i++) {
+            if (mDiagonalCorner.get(i).contains(x, y)) {
+                mDiagonalCorner.remove(i);
+                return true;
+            }
+        }
         return false;
     }
-	
-	private boolean isBeginOrEndCross(int x, int y) {
-        for(int i=0; i< mCrossRect.size(); i++){
-			if(mCrossRect.get(i).contains(x, y)){
-				mCrossRect.remove(i);
-				return true;
-			}
-		}
+
+    private boolean isBeginOrEndCross(int x, int y) {
+        for (int i = 0; i < mCrossRect.size(); i++) {
+            if (mCrossRect.get(i).contains(x, y)) {
+                mCrossRect.remove(i);
+                return true;
+            }
+        }
         return false;
     }
-	
-	private void resetCrossRect(){
-		mCrossRect.clear();
-		mCrossRect.add(new RectF(mRectWidth/2-mDiagonalCheckWidth/2, 0, mRectWidth/2+mDiagonalCheckWidth/2, mDiagonalCheckWidth));
-		mCrossRect.add(new RectF(mRectWidth/2-mDiagonalCheckWidth/2, mRectHeight-mDiagonalCheckWidth, mRectWidth/2+mDiagonalCheckWidth/2, mRectHeight));
-		mCrossRect.add(new RectF(0, mRectHeight/2-mDiagonalCheckWidth/2, mDiagonalCheckWidth, mRectHeight/2+mDiagonalCheckWidth/2));
-		mCrossRect.add(new RectF(mRectWidth-mDiagonalCheckWidth, mRectHeight/2-mDiagonalCheckWidth/2, mRectWidth, mRectHeight/2+mDiagonalCheckWidth/2));
-	}
-	
-	private void clearDrawCross(){
-		Log.d("LineTest", "clearDrawCross");
-		mHorizontalLinePoint.clear();
-		mDrawHorizontalLineSuccess = false;
-		mVerticalLinePoint.clear();
-		mDrawVerticalLineSuccess = false;
-		mDrawCrossSuccess = false;
-		resetCrossRect();
-	}
-	
-	private void addDrawCrossPoint(Point point){
-		if(!mDrawHorizontalLineSuccess){
-			mHorizontalLinePoint.add(point);
-		}else if(!mDrawVerticalLineSuccess){
-			mVerticalLinePoint.add(point);
-		}
-	}
-	
-	private int isDrawInCross(List<Point> drawPoint){		
-		Point point;
-		int crossCheck = 0;
-		for(int i = 0; i < mCrossCheck.size(); i++){
-			Log.d("LineTest", "i="+i+"left="+mCrossCheck.get(i).left+"top"+mCrossCheck.get(i).top+"right"+mCrossCheck.get(i).right+"bottom"+mCrossCheck.get(i).bottom);
-			for(int j = 0; j < drawPoint.size(); j++){
-			    point = drawPoint.get(j);
-				if(mCrossCheck.get(i).contains(point.x, point.y)){
-				    crossCheck ++;
-					break;
-			    }
-			}
-		}
-		if(crossCheck == 2){
-			if(!mDrawHorizontalLineSuccess){
-				mDrawHorizontalLineSuccess = true;
-				Log.d("LineTest", "mDrawHorizontalLineSuccess=true");
-			}else{
-				mDrawVerticalLineSuccess = true;
-				Log.d("LineTest", "mDrawVerticalLineSuccess=true");
-			}
-		}else{
-			clearDrawDiagonal();
-			Log.d("LineTest", "mDrawDiagonalSuccess=false crossCheck="+crossCheck);
-		}
-		return crossCheck;
-	}
-	
-	private void resetDiagonalCorner(){
-		mDiagonalCorner.clear();
-		mDiagonalCorner.add(new RectF(0f, 0f, mDiagonalCornerWidth, mDiagonalCornerWidth));
-		mDiagonalCorner.add(new RectF(0f, mRectHeight-mDiagonalCornerWidth, mDiagonalCornerWidth, mRectHeight));
-		mDiagonalCorner.add(new RectF(mRectWidth-mDiagonalCornerWidth, 0f, mRectWidth, mDiagonalCornerWidth));
-		mDiagonalCorner.add(new RectF(mRectWidth-mDiagonalCornerWidth, mRectHeight-mDiagonalCornerWidth, mRectWidth, mRectHeight));
-	}
-	
-	private void clearDrawDiagonal() {
-		Log.d("LineTest", "clearDrawDiagonal");
-		mDiagonalDrawPoint1.clear();
-		mDrawDiagonalSuccess1 = false;
-		mDiagonalDrawPoint2.clear();
-		mDrawDiagonalSuccess2 = false;
-		resetDiagonalCorner();
-		mDrawDiagonalSuccess = false;
+
+    private void resetCrossRect() {
+        mCrossRect.clear();
+        mCrossRect.add(new RectF(mRectWidth / 2 - mDiagonalCheckWidth / 2, 0, mRectWidth / 2 + mDiagonalCheckWidth / 2, mDiagonalCheckWidth));
+        mCrossRect.add(new RectF(mRectWidth / 2 - mDiagonalCheckWidth / 2, mRectHeight - mDiagonalCheckWidth, mRectWidth / 2 + mDiagonalCheckWidth / 2, mRectHeight));
+        mCrossRect.add(new RectF(0, mRectHeight / 2 - mDiagonalCheckWidth / 2, mDiagonalCheckWidth, mRectHeight / 2 + mDiagonalCheckWidth / 2));
+        mCrossRect.add(new RectF(mRectWidth - mDiagonalCheckWidth, mRectHeight / 2 - mDiagonalCheckWidth / 2, mRectWidth, mRectHeight / 2 + mDiagonalCheckWidth / 2));
     }
-	
-	private void addDrawDiagonalPoint(Point point){
-		if(!mDrawDiagonalSuccess1){
-			mDiagonalDrawPoint1.add(point);
-		}else if(!mDrawDiagonalSuccess2){
-			mDiagonalDrawPoint2.add(point);
-		}
-	}
-	
-	private int isDrawInDiagonal(List<Point> diagonalDrawPoint){		
-		Point point;
-		int diagonalCheck = 0;
-		for(int i = 0; i < mDiagonalCheck.size(); i++){
-			Log.d("LineTest", "i="+i+"left="+mDiagonalCheck.get(i).left+"top"+mDiagonalCheck.get(i).top+"right"+mDiagonalCheck.get(i).right+"bottom"+mDiagonalCheck.get(i).bottom);
-			for(int j = 0; j < diagonalDrawPoint.size(); j++){
-			    point = diagonalDrawPoint.get(j);
-				if(mDiagonalCheck.get(i).contains(point.x, point.y)){
-				    diagonalCheck ++;
-					break;
-			    }
-			}
-		}
-		if(diagonalCheck == 3){
-			if(!mDrawDiagonalSuccess1){
-				mDrawDiagonalSuccess1 = true;
-				Log.d("LineTest", "mDrawDiagonalSuccess1=true");
-			}else{
-				mDrawDiagonalSuccess2 = true;
-				Log.d("LineTest", "mDrawDiagonalSuccess2=true");
-			}
-		}else{
-			clearDrawDiagonal();
-			Log.d("LineTest", "mDrawDiagonalSuccess=false diagonalCorner="+diagonalCheck);
-		}
-		return diagonalCheck;
-	}
+
+    private void clearDrawCross() {
+        Log.d("LineTest", "clearDrawCross");
+        mHorizontalLinePoint.clear();
+        mDrawHorizontalLineSuccess = false;
+        mVerticalLinePoint.clear();
+        mDrawVerticalLineSuccess = false;
+        mDrawCrossSuccess = false;
+        resetCrossRect();
+    }
+
+    private void addDrawCrossPoint(Point point) {
+        if (!mDrawHorizontalLineSuccess) {
+            mHorizontalLinePoint.add(point);
+        } else if (!mDrawVerticalLineSuccess) {
+            mVerticalLinePoint.add(point);
+        }
+    }
+
+    private int isDrawInCross(List<Point> drawPoint) {
+        Point point;
+        int crossCheck = 0;
+        for (int i = 0; i < mCrossCheck.size(); i++) {
+            Log.d("LineTest", "i=" + i + "left=" + mCrossCheck.get(i).left + "top" + mCrossCheck.get(i).top + "right" + mCrossCheck.get(i).right + "bottom" + mCrossCheck.get(i).bottom);
+            for (int j = 0; j < drawPoint.size(); j++) {
+                point = drawPoint.get(j);
+                if (mCrossCheck.get(i).contains(point.x, point.y)) {
+                    crossCheck++;
+                    break;
+                }
+            }
+        }
+        if (crossCheck == 2) {
+            if (!mDrawHorizontalLineSuccess) {
+                mDrawHorizontalLineSuccess = true;
+                Log.d("LineTest", "mDrawHorizontalLineSuccess=true");
+            } else {
+                mDrawVerticalLineSuccess = true;
+                Log.d("LineTest", "mDrawVerticalLineSuccess=true");
+            }
+        } else {
+            clearDrawDiagonal();
+            Log.d("LineTest", "mDrawDiagonalSuccess=false crossCheck=" + crossCheck);
+        }
+        return crossCheck;
+    }
+
+    private void resetDiagonalCorner() {
+        mDiagonalCorner.clear();
+        mDiagonalCorner.add(new RectF(0f, 0f, mDiagonalCornerWidth, mDiagonalCornerWidth));
+        mDiagonalCorner.add(new RectF(0f, mRectHeight - mDiagonalCornerWidth, mDiagonalCornerWidth, mRectHeight));
+        mDiagonalCorner.add(new RectF(mRectWidth - mDiagonalCornerWidth, 0f, mRectWidth, mDiagonalCornerWidth));
+        mDiagonalCorner.add(new RectF(mRectWidth - mDiagonalCornerWidth, mRectHeight - mDiagonalCornerWidth, mRectWidth, mRectHeight));
+    }
+
+    private void clearDrawDiagonal() {
+        Log.d("LineTest", "clearDrawDiagonal");
+        mDiagonalDrawPoint1.clear();
+        mDrawDiagonalSuccess1 = false;
+        mDiagonalDrawPoint2.clear();
+        mDrawDiagonalSuccess2 = false;
+        resetDiagonalCorner();
+        mDrawDiagonalSuccess = false;
+    }
+
+    private void addDrawDiagonalPoint(Point point) {
+        if (!mDrawDiagonalSuccess1) {
+            mDiagonalDrawPoint1.add(point);
+        } else if (!mDrawDiagonalSuccess2) {
+            mDiagonalDrawPoint2.add(point);
+        }
+    }
+
+    private int isDrawInDiagonal(List<Point> diagonalDrawPoint) {
+        Point point;
+        int diagonalCheck = 0;
+        for (int i = 0; i < mDiagonalCheck.size(); i++) {
+            Log.d("LineTest", "i=" + i + "left=" + mDiagonalCheck.get(i).left + "top" + mDiagonalCheck.get(i).top + "right" + mDiagonalCheck.get(i).right + "bottom" + mDiagonalCheck.get(i).bottom);
+            for (int j = 0; j < diagonalDrawPoint.size(); j++) {
+                point = diagonalDrawPoint.get(j);
+                if (mDiagonalCheck.get(i).contains(point.x, point.y)) {
+                    diagonalCheck++;
+                    break;
+                }
+            }
+        }
+        if (diagonalCheck == 3) {
+            if (!mDrawDiagonalSuccess1) {
+                mDrawDiagonalSuccess1 = true;
+                Log.d("LineTest", "mDrawDiagonalSuccess1=true");
+            } else {
+                mDrawDiagonalSuccess2 = true;
+                Log.d("LineTest", "mDrawDiagonalSuccess2=true");
+            }
+        } else {
+            clearDrawDiagonal();
+            Log.d("LineTest", "mDrawDiagonalSuccess=false diagonalCorner=" + diagonalCheck);
+        }
+        return diagonalCheck;
+    }
 
     private void distributeAllPoint(List<List<Point>> lists) {
         Point aPoint;
@@ -354,6 +400,7 @@ public class LineTest extends BaseTestActivity {
             list = lists.get(j);
             for (int i = 0; i < list.size(); i++) {
                 aPoint = list.get(i);
+                checkRect(aPoint);
                 if (aPoint.x < mRectWidth / 2) {
                     if (aPoint.y < mRectHeight / 2) {
                         if (aPoint.x > aPoint.y) {
@@ -403,27 +450,27 @@ public class LineTest extends BaseTestActivity {
         temp.add(new Point(mPadding, mRectHeight - mPadding));
         temp.add(new Point(mRectWidth - mPadding, mRectHeight - mPadding));
         mPts1.add(temp);
-		mDiagonalCorner.add(new RectF(0f, 0f, mDiagonalCornerWidth, mDiagonalCornerWidth));
-		mDiagonalCorner.add(new RectF(0f, mRectHeight-mDiagonalCornerWidth, mDiagonalCornerWidth, mRectHeight));
-		mDiagonalCorner.add(new RectF(mRectWidth-mDiagonalCornerWidth, 0f, mRectWidth, mDiagonalCornerWidth));
-		mDiagonalCorner.add(new RectF(mRectWidth-mDiagonalCornerWidth, mRectHeight-mDiagonalCornerWidth, mRectWidth, mRectHeight));
-		
-		mDiagonalCheck.add(new RectF(mRectWidth/2-mDiagonalCheckWidth/2, mRectHeight/2-mDiagonalCheckWidth/2, mRectWidth/2+mDiagonalCheckWidth/2, mRectHeight/2+mDiagonalCheckWidth/2));
-		mDiagonalCheck.add(new RectF(mRectWidth/4-mDiagonalCheckWidth/2, mRectHeight/4-mDiagonalCheckWidth/2, mRectWidth/4+mDiagonalCheckWidth/2, mRectHeight/4+mDiagonalCheckWidth/2));
-		mDiagonalCheck.add(new RectF(mRectWidth/4*3-mDiagonalCheckWidth/2, mRectHeight/4*3-mDiagonalCheckWidth/2, mRectWidth/4*3+mDiagonalCheckWidth/2, mRectHeight/4*3+mDiagonalCheckWidth/2));
-		mDiagonalCheck.add(new RectF(mRectWidth/4-mDiagonalCheckWidth/2, mRectHeight/4*3-mDiagonalCheckWidth/2, mRectWidth/4+mDiagonalCheckWidth/2, mRectHeight/4*3+mDiagonalCheckWidth/2));
-		mDiagonalCheck.add(new RectF(mRectWidth/4*3-mDiagonalCheckWidth/2, mRectHeight/4-mDiagonalCheckWidth/2, mRectWidth/4*3+mDiagonalCheckWidth/2, mRectHeight/4+mDiagonalCheckWidth/2));
-		
-		mCrossRect.add(new RectF(mRectWidth/2-mDiagonalCheckWidth/2, 0, mRectWidth/2+mDiagonalCheckWidth/2, mDiagonalCheckWidth));
-		mCrossRect.add(new RectF(mRectWidth/2-mDiagonalCheckWidth/2, mRectHeight-mDiagonalCheckWidth, mRectWidth/2+mDiagonalCheckWidth/2, mRectHeight));
-		mCrossRect.add(new RectF(0, mRectHeight/2-mDiagonalCheckWidth/2, mDiagonalCheckWidth, mRectHeight/2+mDiagonalCheckWidth/2));
-		mCrossRect.add(new RectF(mRectWidth-mDiagonalCheckWidth, mRectHeight/2-mDiagonalCheckWidth/2, mRectWidth, mRectHeight/2+mDiagonalCheckWidth/2));
-		
-		mCrossCheck.add(new RectF(mRectWidth/2-mDiagonalCheckWidth/2, mRectHeight/4-mDiagonalCheckWidth/2, mRectWidth/2+mDiagonalCheckWidth/2, mRectHeight/4+mDiagonalCheckWidth/2));		
-		mCrossCheck.add(new RectF(mRectWidth/2-mDiagonalCheckWidth/2, mRectHeight/4*3-mDiagonalCheckWidth/2, mRectWidth/2+mDiagonalCheckWidth/2, mRectHeight/4*3+mDiagonalCheckWidth/2));
-		
-		mCrossCheck.add(new RectF(mRectWidth/4-mDiagonalCheckWidth/2, mRectHeight/2-mDiagonalCheckWidth/2, mRectWidth/4+mDiagonalCheckWidth/2, mRectHeight/2+mDiagonalCheckWidth/2));		
-		mCrossCheck.add(new RectF(mRectWidth/4*3-mDiagonalCheckWidth/2, mRectHeight/2-mDiagonalCheckWidth/2, mRectWidth/4*3+mDiagonalCheckWidth/2, mRectHeight/2+mDiagonalCheckWidth/2));
+        mDiagonalCorner.add(new RectF(0f, 0f, mDiagonalCornerWidth, mDiagonalCornerWidth));
+        mDiagonalCorner.add(new RectF(0f, mRectHeight - mDiagonalCornerWidth, mDiagonalCornerWidth, mRectHeight));
+        mDiagonalCorner.add(new RectF(mRectWidth - mDiagonalCornerWidth, 0f, mRectWidth, mDiagonalCornerWidth));
+        mDiagonalCorner.add(new RectF(mRectWidth - mDiagonalCornerWidth, mRectHeight - mDiagonalCornerWidth, mRectWidth, mRectHeight));
+
+        mDiagonalCheck.add(new RectF(mRectWidth / 2 - mDiagonalCheckWidth / 2, mRectHeight / 2 - mDiagonalCheckWidth / 2, mRectWidth / 2 + mDiagonalCheckWidth / 2, mRectHeight / 2 + mDiagonalCheckWidth / 2));
+        mDiagonalCheck.add(new RectF(mRectWidth / 4 - mDiagonalCheckWidth / 2, mRectHeight / 4 - mDiagonalCheckWidth / 2, mRectWidth / 4 + mDiagonalCheckWidth / 2, mRectHeight / 4 + mDiagonalCheckWidth / 2));
+        mDiagonalCheck.add(new RectF(mRectWidth / 4 * 3 - mDiagonalCheckWidth / 2, mRectHeight / 4 * 3 - mDiagonalCheckWidth / 2, mRectWidth / 4 * 3 + mDiagonalCheckWidth / 2, mRectHeight / 4 * 3 + mDiagonalCheckWidth / 2));
+        mDiagonalCheck.add(new RectF(mRectWidth / 4 - mDiagonalCheckWidth / 2, mRectHeight / 4 * 3 - mDiagonalCheckWidth / 2, mRectWidth / 4 + mDiagonalCheckWidth / 2, mRectHeight / 4 * 3 + mDiagonalCheckWidth / 2));
+        mDiagonalCheck.add(new RectF(mRectWidth / 4 * 3 - mDiagonalCheckWidth / 2, mRectHeight / 4 - mDiagonalCheckWidth / 2, mRectWidth / 4 * 3 + mDiagonalCheckWidth / 2, mRectHeight / 4 + mDiagonalCheckWidth / 2));
+
+        mCrossRect.add(new RectF(mRectWidth / 2 - mDiagonalCheckWidth / 2, 0, mRectWidth / 2 + mDiagonalCheckWidth / 2, mDiagonalCheckWidth));
+        mCrossRect.add(new RectF(mRectWidth / 2 - mDiagonalCheckWidth / 2, mRectHeight - mDiagonalCheckWidth, mRectWidth / 2 + mDiagonalCheckWidth / 2, mRectHeight));
+        mCrossRect.add(new RectF(0, mRectHeight / 2 - mDiagonalCheckWidth / 2, mDiagonalCheckWidth, mRectHeight / 2 + mDiagonalCheckWidth / 2));
+        mCrossRect.add(new RectF(mRectWidth - mDiagonalCheckWidth, mRectHeight / 2 - mDiagonalCheckWidth / 2, mRectWidth, mRectHeight / 2 + mDiagonalCheckWidth / 2));
+
+        mCrossCheck.add(new RectF(mRectWidth / 2 - mDiagonalCheckWidth / 2, mRectHeight / 4 - mDiagonalCheckWidth / 2, mRectWidth / 2 + mDiagonalCheckWidth / 2, mRectHeight / 4 + mDiagonalCheckWidth / 2));
+        mCrossCheck.add(new RectF(mRectWidth / 2 - mDiagonalCheckWidth / 2, mRectHeight / 4 * 3 - mDiagonalCheckWidth / 2, mRectWidth / 2 + mDiagonalCheckWidth / 2, mRectHeight / 4 * 3 + mDiagonalCheckWidth / 2));
+
+        mCrossCheck.add(new RectF(mRectWidth / 4 - mDiagonalCheckWidth / 2, mRectHeight / 2 - mDiagonalCheckWidth / 2, mRectWidth / 4 + mDiagonalCheckWidth / 2, mRectHeight / 2 + mDiagonalCheckWidth / 2));
+        mCrossCheck.add(new RectF(mRectWidth / 4 * 3 - mDiagonalCheckWidth / 2, mRectHeight / 2 - mDiagonalCheckWidth / 2, mRectWidth / 4 * 3 + mDiagonalCheckWidth / 2, mRectHeight / 2 + mDiagonalCheckWidth / 2));
     }
 
     public void readPoints() {
@@ -516,12 +563,12 @@ public class LineTest extends BaseTestActivity {
                 p2 = temp.get(1);
                 canvas.drawLine(p1.x, p1.y, p2.x, p2.y, mLinePaint);
             }
-			
-			canvas.drawLine(0, 0, mRectWidth, mRectHeight, mLinePaint);
-			canvas.drawLine(0, mRectHeight, mRectWidth, 0, mLinePaint);
-			
-			canvas.drawLine(mRectWidth/2, 0, mRectWidth/2, mRectHeight, mLinePaint);
-			canvas.drawLine(0, mRectHeight/2, mRectWidth, mRectHeight/2, mLinePaint);
+
+            canvas.drawLine(0, 0, mRectWidth, mRectHeight, mLinePaint);
+            canvas.drawLine(0, mRectHeight, mRectWidth, 0, mLinePaint);
+
+            canvas.drawLine(mRectWidth / 2, 0, mRectWidth / 2, mRectHeight, mLinePaint);
+            canvas.drawLine(0, mRectHeight / 2, mRectWidth, mRectHeight / 2, mLinePaint);
 
             mLinePaint.setARGB(255, 255, 0, 0);
             for (i = 0; i < mTemPoints.size() - 2; i++) {
@@ -538,34 +585,34 @@ public class LineTest extends BaseTestActivity {
                     canvas.drawLine(p1.x, p1.y, p2.x, p2.y, mLinePaint);
                 }
             }
-			for (i = 0; i < mDiagonalDrawPoint1.size() - 1; i++){
-				p1 = mDiagonalDrawPoint1.get(i);
-				p2 = mDiagonalDrawPoint1.get(i+1);
-                canvas.drawLine(p1.x, p1.y, p2.x, p2.y, mLinePaint);				
-			}
-			for (i = 0; i < mDiagonalDrawPoint2.size() - 1; i++){
-				p1 = mDiagonalDrawPoint2.get(i);
-				p2 = mDiagonalDrawPoint2.get(i+1);
-                canvas.drawLine(p1.x, p1.y, p2.x, p2.y, mLinePaint);				
-			}
-			
-			for (i = 0; i < mHorizontalLinePoint.size() - 1; i++){
-				p1 = mHorizontalLinePoint.get(i);
-				p2 = mHorizontalLinePoint.get(i+1);
-                canvas.drawLine(p1.x, p1.y, p2.x, p2.y, mLinePaint);				
-			}
-			for (i = 0; i < mVerticalLinePoint.size() - 1; i++){
-				p1 = mVerticalLinePoint.get(i);
-				p2 = mVerticalLinePoint.get(i+1);
-                canvas.drawLine(p1.x, p1.y, p2.x, p2.y, mLinePaint);				
-			}
+            for (i = 0; i < mDiagonalDrawPoint1.size() - 1; i++) {
+                p1 = mDiagonalDrawPoint1.get(i);
+                p2 = mDiagonalDrawPoint1.get(i + 1);
+                canvas.drawLine(p1.x, p1.y, p2.x, p2.y, mLinePaint);
+            }
+            for (i = 0; i < mDiagonalDrawPoint2.size() - 1; i++) {
+                p1 = mDiagonalDrawPoint2.get(i);
+                p2 = mDiagonalDrawPoint2.get(i + 1);
+                canvas.drawLine(p1.x, p1.y, p2.x, p2.y, mLinePaint);
+            }
+
+            for (i = 0; i < mHorizontalLinePoint.size() - 1; i++) {
+                p1 = mHorizontalLinePoint.get(i);
+                p2 = mHorizontalLinePoint.get(i + 1);
+                canvas.drawLine(p1.x, p1.y, p2.x, p2.y, mLinePaint);
+            }
+            for (i = 0; i < mVerticalLinePoint.size() - 1; i++) {
+                p1 = mVerticalLinePoint.get(i);
+                p2 = mVerticalLinePoint.get(i + 1);
+                canvas.drawLine(p1.x, p1.y, p2.x, p2.y, mLinePaint);
+            }
             if (!mResultString.equals("")) {
                 canvas.drawText(
                         getResources().getString(R.string.Offset) + mResultString,
                         20 * mZoom, height, mTextPaint);
             }
             canvas.drawCircle(mRectWidth / 2, mRectHeight / 2, 50, mOkPaint);
-            canvas.drawText("先画框,再画叉,最后画十",mRectWidth/5, mRectHeight / 2 - 55, mOkPaint);
+            canvas.drawText("先画框,再画叉,最后画十", mRectWidth / 5, mRectHeight / 2 - 55, mOkPaint);
 
         }
 
@@ -582,96 +629,98 @@ public class LineTest extends BaseTestActivity {
                 case MotionEvent.ACTION_DOWN:
                     if (!mIsDrawRect
                             && !(x < mRectWidth / 2 + 50 && x > mRectWidth / 2 - 50
-                                    && y < mRectHeight / 2 + 50 && y > mRectHeight / 2 - 50)){
+                            && y < mRectHeight / 2 + 50 && y > mRectHeight / 2 - 50)) {
                         mIsDrawRect = isBeginOrEndPoint(x, y);
-					}else if(!mDrawDiagonalSuccess){
-						Log.d("LineTest", "mDrawRectSuccess1="+mDrawRectSuccess+"x="+x+"y="+y);
-						if(!isBeginOrEndDiagonal(x, y)){							
-							clearDrawDiagonal();
-						}else{
-							addDrawDiagonalPoint(new Point(x, y));
-						}
-					}else{
-						Log.d("LineTest", "mDrawDiagonalSuccess="+mDrawDiagonalSuccess+"x="+x+"y="+y);
-						if(!isBeginOrEndCross(x, y)){							
-							clearDrawCross();
-						}else{
-							addDrawCrossPoint(new Point(x, y));
-						}
-					}
+                    } else if (!mDrawDiagonalSuccess) {
+                        Log.d("LineTest", "mDrawRectSuccess1=" + mDrawRectSuccess + "x=" + x + "y=" + y);
+                        if (!isBeginOrEndDiagonal(x, y)) {
+                            clearDrawDiagonal();
+                        } else {
+                            addDrawDiagonalPoint(new Point(x, y));
+                        }
+                    } else {
+                        Log.d("LineTest", "mDrawDiagonalSuccess=" + mDrawDiagonalSuccess + "x=" + x + "y=" + y);
+                        if (!isBeginOrEndCross(x, y)) {
+                            clearDrawCross();
+                        } else {
+                            addDrawCrossPoint(new Point(x, y));
+                        }
+                    }
                     break;
 
                 case MotionEvent.ACTION_MOVE:
-				    if(!mDrawRectSuccess){
-					    mTemPoints.add(new Point(x, y));
-				    }else if(!mDrawDiagonalSuccess){
-						addDrawDiagonalPoint(new Point(x, y));
-					}else if(!mDrawCrossSuccess){
-						addDrawCrossPoint(new Point(x, y));
-					}
+                    if (!mDrawRectSuccess) {
+                        mTemPoints.add(new Point(x, y));
+                    } else if (!mDrawDiagonalSuccess) {
+                        addDrawDiagonalPoint(new Point(x, y));
+                    } else if (!mDrawCrossSuccess) {
+                        addDrawCrossPoint(new Point(x, y));
+                    }
                     break;
 
                 case MotionEvent.ACTION_UP:
-				    Log.d("LineTest", "x="+x+"y="+y+"a="+(mRectWidth / 2 + 50)+"b="+(mRectHeight / 2 + 50));
+                    Log.d("LineTest", "x=" + x + "y=" + y + "a=" + (mRectWidth / 2 + 50) + "b=" + (mRectHeight / 2 + 50));
                     if (!mDrawRectSuccess && x < mRectWidth / 2 + 50 && x > mRectWidth / 2 - 50
                             && y < mRectHeight / 2 + 50 && y > mRectHeight / 2 - 50) {
                         CalculateDiversity();
                         break;
-                    } else if(mDrawRectSuccess && !mDrawDiagonalSuccess){
-						addDrawDiagonalPoint(new Point(x, y));
-						if(!isBeginOrEndDiagonal(x, y)){
-							showDialog(getString(R.string.Error),
-	                                getString(R.string.DrawError), true, false);
-							/*clearDrawDiagonal();*/
-							break;
-						}else if(!mDrawDiagonalSuccess1){
-							isDrawInDiagonal(mDiagonalDrawPoint1);
-						} else if(!mDrawDiagonalSuccess2){
-							isDrawInDiagonal(mDiagonalDrawPoint2);
-						}
-						if(mDrawDiagonalSuccess1 && mDrawDiagonalSuccess2){
-							mDrawDiagonalSuccess = true;
-						}
-						break;
-					} else if (mIsDrawRect && !mDrawRectSuccess) {
+                    } else if (mDrawRectSuccess && !mDrawDiagonalSuccess) {
+                        addDrawDiagonalPoint(new Point(x, y));
+                        if (!isBeginOrEndDiagonal(x, y)) {
+                            showDialog(getString(R.string.Error),
+                                    getString(R.string.DrawError), true, false);
+                            /*clearDrawDiagonal();*/
+                            break;
+                        } else if (!mDrawDiagonalSuccess1) {
+                            isDrawInDiagonal(mDiagonalDrawPoint1);
+                        } else if (!mDrawDiagonalSuccess2) {
+                            isDrawInDiagonal(mDiagonalDrawPoint2);
+                        }
+                        if (mDrawDiagonalSuccess1 && mDrawDiagonalSuccess2) {
+                            mDrawDiagonalSuccess = true;
+                        }
+                        break;
+                    } else if (mIsDrawRect && !mDrawRectSuccess) {
                         mIsDrawRect = isBeginOrEndPoint(x, y);
-						mDrawRectSuccess = mIsDrawRect;
-						Log.d("LineTest", "mDrawRectSuccess="+mDrawRectSuccess);
-						mInput.add(mTemPoints);
+                        mDrawRectSuccess = mIsDrawRect;
+                        Log.d("LineTest", "mDrawRectSuccess=" + mDrawRectSuccess);
+                        mInput.add(mTemPoints);
                         mTemPoints = new ArrayList<Point>();
-						CalculateDiversity();
-						Log.d("LineTest", "mDrawRectSuccess="+mDrawRectSuccess);
-                    }else if(mDrawRectSuccess && mDrawDiagonalSuccess){
-						addDrawCrossPoint(new Point(x, y));
-						if(!isBeginOrEndCross(x, y)){
-							showDialog(getString(R.string.Error),
-	                                getString(R.string.DrawError), true, false);
-							/*clearDrawCross();*/
-							break;
-						}else if(!mDrawHorizontalLineSuccess){
-							isDrawInCross(mHorizontalLinePoint);
-						} else if(!mDrawVerticalLineSuccess){
-							isDrawInCross(mVerticalLinePoint);
-						}
-						if(mDrawHorizontalLineSuccess && mDrawVerticalLineSuccess){
-							mDrawCrossSuccess = true;
-						    Utils.SetPreferences(getApplicationContext(), mSp, R.string.touchscreen_name, AppDefine.FT_SUCCESS);
+                        CalculateDiversity();
+                        Log.d("LineTest", "mDrawRectSuccess=" + mDrawRectSuccess);
+                    } else if (mDrawRectSuccess && mDrawDiagonalSuccess) {
+                        addDrawCrossPoint(new Point(x, y));
+                        if (!isBeginOrEndCross(x, y)) {
+                            showDialog(getString(R.string.Error),
+                                    getString(R.string.DrawError), true, false);
+                            /*clearDrawCross();*/
+                            break;
+                        } else if (!mDrawHorizontalLineSuccess) {
+                            isDrawInCross(mHorizontalLinePoint);
+                        } else if (!mDrawVerticalLineSuccess) {
+                            isDrawInCross(mVerticalLinePoint);
+                        }
+                        if (mDrawHorizontalLineSuccess && mDrawVerticalLineSuccess) {
+                            mDrawCrossSuccess = true;
+                            Utils.SetPreferences(getApplicationContext(), mSp, R.string.touchscreen_name, AppDefine.FT_SUCCESS);
                             finish();
-						}
-						break;
-					}
-					if(mDrawRectSuccess && mDrawDiagonalSuccess1 && mDrawDiagonalSuccess2 && mDrawHorizontalLineSuccess && mDrawVerticalLineSuccess){
-						mDrawCrossSuccess = true;
-						Utils.SetPreferences(getApplicationContext(), mSp, R.string.touchscreen_name, AppDefine.FT_SUCCESS);
+                        }
+                        break;
+                    }
+                    if (mDrawRectSuccess && mDrawDiagonalSuccess1 && mDrawDiagonalSuccess2 && mDrawHorizontalLineSuccess && mDrawVerticalLineSuccess) {
+                        mDrawCrossSuccess = true;
+                        Utils.SetPreferences(getApplicationContext(), mSp, R.string.touchscreen_name, AppDefine.FT_SUCCESS);
                         finish();
-						break;
-					}
-					if (!mDrawRectSuccess) {
+                        break;
+                    }
+                    if (!mDrawRectSuccess) {
                         /*showDialog(getString(R.string.Error),
                                 getString(R.string.DrawError), true, true);*/
-						showDialog(getString(R.string.Error),
+                        showDialog(getString(R.string.Error),
                                 getString(R.string.DrawError), true, false);
                     }
+                    break;
+                default:
                     break;
             }
             invalidate();
@@ -695,12 +744,16 @@ public class LineTest extends BaseTestActivity {
 								clearDrawDiagonal();
 								clearDrawCross();
                                 invalidate();*/
-                            	if(!mDrawRectSuccess){
-									mInput.clear();
+                                if (!mDrawRectSuccess) {
+                                    mInput.clear();
                                     mTemPoints.clear();
-								}else if(mDrawRectSuccess && !mDrawDiagonalSuccess){
-                                   clearDrawDiagonal(); 
-                                }else if(mDrawRectSuccess && mDrawDiagonalSuccess){
+                                    mInputLeft.clear();
+                                    mInputTop.clear();
+                                    mInputRight.clear();
+                                    mInputBottom.clear();
+                                } else if (mDrawRectSuccess && !mDrawDiagonalSuccess) {
+                                    clearDrawDiagonal();
+                                } else if (mDrawRectSuccess && mDrawDiagonalSuccess) {
                                     clearDrawCross();
                                 }
                                 invalidate();
@@ -713,12 +766,16 @@ public class LineTest extends BaseTestActivity {
 
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                if(!mDrawRectSuccess){
-									mInput.clear();
+                                if (!mDrawRectSuccess) {
+                                    mInput.clear();
                                     mTemPoints.clear();
-								}else if(mDrawRectSuccess && !mDrawDiagonalSuccess){
-                                   clearDrawDiagonal(); 
-                                }else if(mDrawRectSuccess && mDrawDiagonalSuccess){
+                                    mInputLeft.clear();
+                                    mInputTop.clear();
+                                    mInputRight.clear();
+                                    mInputBottom.clear();
+                                } else if (mDrawRectSuccess && !mDrawDiagonalSuccess) {
+                                    clearDrawDiagonal();
+                                } else if (mDrawRectSuccess && mDrawDiagonalSuccess) {
                                     clearDrawCross();
                                 }
                                 invalidate();

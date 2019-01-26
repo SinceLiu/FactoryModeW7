@@ -84,7 +84,7 @@ public class GSensorWithCalibrate extends BaseTestActivity implements OnClickLis
                 case MSG_GSENSOR_RESULT:
                     if(result) {
                         tvSensorResult.setText(R.string.Success);
-                        btnSensorCalicate.setVisibility(View.GONE);
+                        btnSensorCalicate.setVisibility(View.VISIBLE);
                         mBtOk.setEnabled(true);
                         if(AllTest.begin_auto_test){
                             Utils.SetPreferences(GSensorWithCalibrate.this, mSp, R.string.gsensor_with_calibrate_name, AppDefine.FT_SUCCESS);
@@ -92,7 +92,7 @@ public class GSensorWithCalibrate extends BaseTestActivity implements OnClickLis
                         }
                     } else {
                         tvSensorResult.setText(R.string.Failed);
-                        btnSensorCalicate.setVisibility(View.VISIBLE);
+                        btnSensorCalicate.setVisibility(View.GONE);
                         mBtOk.setEnabled(false);
                     }
                     count = 0;
@@ -232,17 +232,11 @@ public class GSensorWithCalibrate extends BaseTestActivity implements OnClickLis
                 float absy = Math.abs(y);
                 float absz = Math.abs(z);
 
-                /*boolean zzz = (absz >= 7.0 && absz <= 13.0);
+                boolean zzz = (absz >= 7.0 && absz <= 13.0);
                 if(SystemProperties.get("ro.cenon_factorymode_feature").equals("1")) {
                     zzz = (absz >= 5.0 && absz <= 15.0);
                 }
-                if(absx <= 5.0 && absy <= 5.0 && zzz) {
-                    result = true;
-                } else {
-                    result = false;
-                }*/
-                boolean zzz = (absz >= 8.5 && absz <= 11.5);
-                if(absx <= 1.5 && absy <= 1.5 && zzz) {
+                if((absx <= 3.0 && absx >= -3.0) && (absy <= 3.0 && absy >= -3.0) && zzz) {
                     result = true;
                 } else {
                     result = false;
